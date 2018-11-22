@@ -6,7 +6,6 @@ secret_number = 42
 
 str_hint = input("Type you number: ")
 
-
 print("You typed: ", str_hint)
 
 try:
@@ -15,9 +14,7 @@ except:
   print("You must type a number!")
   exit()
 
-
 if(secret_number == hint):
     print("You're right!")
 else:
     print("You missed :(")
-
