@@ -16,5 +16,7 @@ except:
 
 if(secret_number == hint):
     print("You're right!")
+elif(hint > secret_number):
+    print("The hint is grater than secret number!")
 else:
-    print("You missed :(")
+    print("The hint is less than secret number!")    
