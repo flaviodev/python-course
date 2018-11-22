@@ -13,9 +13,13 @@ except:
   print("You must type a number!")
   exit()
 
-if(secret_number == hint):
+you_are_right = hint == secret_number
+hint_greater_than = hint > secret_number
+hint_less_than = hint < secret_number
+
+if(you_are_right):
     print("You're right!")
-elif(hint > secret_number):
-    print("The hint is grater than secret number!")
-else:
+elif(hint_greater_than):
+    print("The hint is greater than secret number!")
+elif(hint_less_than):
     print("The hint is less than secret number!")    
