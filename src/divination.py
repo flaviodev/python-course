@@ -1,8 +1,8 @@
+import random
+
 print("---------------------------------------------------------------")
 print("Welcome to divination game")
 print("---------------------------------------------------------------")
-
-import random
 
 total_of_attempts = 3
 secret_number = random.randrange(1,11) # range 1 to 10
