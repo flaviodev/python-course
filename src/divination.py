@@ -2,8 +2,10 @@ print("---------------------------------------------------------------")
 print("Welcome to divination game")
 print("---------------------------------------------------------------")
 
+import random
+
 total_of_attempts = 3
-secret_number = 42
+secret_number = int(random.random() * 10)
 
 for current_attempt in range(1, total_of_attempts +1):
     print("Current attempt: {} of {}".format(current_attempt, total_of_attempts))
@@ -16,7 +18,7 @@ for current_attempt in range(1, total_of_attempts +1):
         print("You must type a number!")
         continue
 
-    if(hint < 1 or hint > 100):
+    if(hint < 1 or hint > 10):
         print("You must type a number between 1 and 100!")
         continue        
 
@@ -32,4 +34,4 @@ for current_attempt in range(1, total_of_attempts +1):
     elif(hint_less_than):
         print("The hint is less than secret number!")    
 
-print("Game over")
+print("Game over. The secret number was: ", secret_number)
