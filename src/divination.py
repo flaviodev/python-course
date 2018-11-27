@@ -32,5 +32,4 @@ for current_attempt in range(1, total_of_attempts +1):
     elif(hint_less_than):
         print("The hint is less than secret number!")    
 
-
 print("Game over")
