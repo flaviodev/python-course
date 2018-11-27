@@ -3,11 +3,11 @@ print("Welcome to divination game")
 print("---------------------------------------------------------------")
 
 total_of_attempts = 3
-usedremaining_attempts = total_of_attempts
+used_remaining_attempts = total_of_attempts
 current_attempt = 1
 secret_number = 42
 
-while(usedremaining_attempts > 0):
+for used_remaining_attempts in range(1, used_remaining_attempts +1):
     print("Current attempt: {} of {}".format(current_attempt, total_of_attempts))
     str_hint = input("Type you number: ")
     print("You typed: ", str_hint)
@@ -31,6 +31,5 @@ while(usedremaining_attempts > 0):
         print("The hint is less than secret number!")    
 
     current_attempt+=1
-    usedremaining_attempts-=1
 
 print("Game over")
