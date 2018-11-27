@@ -5,7 +5,7 @@ print("---------------------------------------------------------------")
 import random
 
 total_of_attempts = 3
-secret_number = random.randrange(1,11)
+secret_number = random.randrange(1,11) # range 1 to 10
 
 for current_attempt in range(1, total_of_attempts +1):
     print("Current attempt: {} of {}".format(current_attempt, total_of_attempts))
