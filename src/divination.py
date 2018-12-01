@@ -8,7 +8,6 @@ def play():
     secret_number = random.randrange(1,101) # range 1 to 100
     score = 1000
 
-
     while(1):
         try:
             print("What is the level of difficulty?")
@@ -69,3 +68,6 @@ def play():
             score = score - error_penalty
 
     print("Game over. The secret number was: ", secret_number)
+
+if(__name__ == "__main__"):
+    play()
