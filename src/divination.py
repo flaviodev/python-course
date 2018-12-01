@@ -12,7 +12,7 @@ while(1):
     try:
         print("What is the level of difficulty?")
         print("(1) Easy (2) Medium (3) Hard")
-        str_level = input("Choice a level: ")
+        str_level = input("Choose a level: ")
         level = int(str_level)
         if(level >= 1 and level <= 3):
             break
