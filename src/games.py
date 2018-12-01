@@ -1,4 +1,5 @@
-import random
+import divination
+import hangman
 
 print("---------------------------------------------------------------")
 print("Choose the game")
@@ -18,10 +19,10 @@ while(1):
         print("You must type a valid game!")
         continue
 
-divination = game == 1
-hangman = game == 2
+divination_game = game == 1
+hangman_game = game == 2
 
-if(divination):
-    print("Divination")
-elif(hangman):
-    print("hangman")
+if(divination_game):
+    divination.play()
+elif(hangman_game):
+    hangman.play()
