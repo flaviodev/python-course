@@ -13,9 +13,10 @@ def play():
 
     while(not lost and not win): 
         hint = input('What is the letter?')
+        hint = hint.strip().upper()
         
         index = 0
-        for letter in secret_word:
+        for letter in secret_word.upper():
             if(hint == letter):
                 print('Letter \'{}\' found on position {}'.format(letter,index))
             index = index + 1
