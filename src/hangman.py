@@ -13,7 +13,8 @@ def play():
     lost = False
     win = False
 
-    total_of_attempts = 10
+    wrong_attempts = 0
+    max_wrong_attempts = 6
 
     while(not lost and not win):
         print_successful_letters = '' 
@@ -24,13 +25,17 @@ def play():
         hint = input('What is the letter?')
         hint = hint.strip().upper()
         
-        index = 0
-        for letter in secret_word.upper():
-            if(hint == letter):
-                successful_letters[index] = letter
-                print('Letter \'{}\' found on position {}'.format(letter,index))
-            index = index + 1
-            
+        if(hint in secret_word.upper()):
+            index = 0
+            for letter in secret_word.upper():
+                if(hint == letter):
+                    successful_letters[index] = letter
+                    print('Letter \'{}\' found on position {}'.format(letter,index))
+                index = index + 1
+        else: 
+            wrong_attempts = wrong_attempts + 1
+
+        lost = wrong_attempts == max_wrong_attempts
 
 if(__name__ == "__main__"):
     play()
