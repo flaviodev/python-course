@@ -37,5 +37,10 @@ def play():
         win = '_' not in successful_letters
         lost = wrong_attempts == max_wrong_attempts
 
+    if(win):
+        print('You hit the secret word:', secret_word)
+    else:
+        print('You lost the secret word:', secret_word)
+
 if(__name__ == "__main__"):
     play()
