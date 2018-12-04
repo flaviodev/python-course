@@ -9,8 +9,17 @@ def play():
     lost = False
     win = False
 
+    total_of_attempts = 10
+
     while(not lost and not win): 
-        print('Playing ...')
+        hint = input('What is the letter?')
+        
+        index = 0
+        for letter in secret_word:
+            if(hint == letter):
+                print('Letter \'{}\' found on position {}'.format(letter,index))
+            index = index + 1
+            
 
 if(__name__ == "__main__"):
     play()
