@@ -4,7 +4,7 @@ def play():
     print("Welcome to hangman game")
     print("---------------------------------------------------------------")
 
-    secret_word = 'banana'
+    secret_word = 'banana'.upper()
     successful_letters = []
 
     for letter in secret_word:
@@ -25,16 +25,16 @@ def play():
         hint = input('What is the letter?')
         hint = hint.strip().upper()
         
-        if(hint in secret_word.upper()):
+        if(hint in secret_word):
             index = 0
-            for letter in secret_word.upper():
+            for letter in secret_word:
                 if(hint == letter):
                     successful_letters[index] = letter
-                    print('Letter \'{}\' found on position {}'.format(letter,index))
                 index = index + 1
         else: 
             wrong_attempts = wrong_attempts + 1
 
+        win = '_' not in successful_letters
         lost = wrong_attempts == max_wrong_attempts
 
 if(__name__ == "__main__"):
