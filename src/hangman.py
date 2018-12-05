@@ -1,10 +1,22 @@
+import random
 
 def play(): 
     print("---------------------------------------------------------------")
     print("Welcome to hangman game")
     print("---------------------------------------------------------------")
 
-    secret_word = 'banana'.upper()
+    file = open('words.txt','r')
+    words = []
+
+    for line in file:
+        line = line.strip()
+        words.append(line)
+
+    file.close()
+
+    random_position = random.randrange(0,len(words))
+
+    secret_word = words[random_position].upper()
     successful_letters = []
 
     for letter in secret_word:
