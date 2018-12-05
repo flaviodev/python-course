@@ -24,8 +24,6 @@ def generate():
     file.write('pear\n')
     file.write('mango')
 
-
-
     file.close()
 
 if(__name__ == "__main__"):
