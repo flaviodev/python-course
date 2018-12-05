@@ -8,7 +8,10 @@ def play():
     successful_letters = []
 
     for letter in secret_word:
-        successful_letters.append('_')
+        if(letter==' '):
+            successful_letters.append(' ')
+        else:
+            successful_letters.append('_')
 
     lost = False
     win = False
